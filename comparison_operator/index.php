@@ -51,9 +51,10 @@
     <pre>
     $data = [2, 5, 1, 9, 0];
     usort($data, function ($left, $right) {
-        return $left[1] <=> $right[1];
+        return $left <=> $right;
     });
     </pre>
+    <h4>Kết quả:</h4>
     <?php
         echo '<pre>';
         var_dump($data);
