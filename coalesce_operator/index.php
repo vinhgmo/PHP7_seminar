@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Null Coalesce Operator</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../action.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <h2>Null Coalesce Operator ??</h3>
