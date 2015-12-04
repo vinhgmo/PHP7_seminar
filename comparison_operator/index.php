@@ -42,9 +42,9 @@
         $b = (object) ["x" => "2"];
         $c = (object) ["x" => "1"];
     </pre>
-    <div class="code comparison4"><h4>So sánh $a <=> $b: </h4> <?php var_dump($a <=> $b); ?></div>
-    <div class="code comparison4"><h4>So sánh $b <=> $a: </h4> <?php var_dump($b <=> $a); ?></div>
-    <div class="code comparison4"><h4>So sánh $a <=> $c: </h4> <?php var_dump($a <=> $c); ?></div>
+    <h4>So sánh $a <=> $b: </h4> <div class="code comparison4"><?php var_dump($a <=> $b); ?></div>
+    <h4>So sánh $b <=> $a: </h4> <div class="code comparison4"><?php var_dump($b <=> $a); ?></div>
+    <h4>So sánh $a <=> $c: </h4> <div class="code comparison4"><?php var_dump($a <=> $c); ?></div>
     <input id="display" type="button" value="Show" onclick="show('comparison4');">
     <hr>
 
@@ -58,19 +58,27 @@
     <pre>
     $data = [2, 5, 1, 9, 0];
     usort($data, function ($left, $right) {
-        //if ($a==$b)
+        /*
+        if ($a==$b)
         {
             return 0;
         }
-        //return ($left < $right)?-1:1;
+        return ($left < $right)?-1:1;
+        */
+
         return $left <=> $right;
     });
     </pre>
+
     <h4>Kết quả:</h4>
+    <pre class="code comparison5">
     <?php
         echo '<pre>';
         var_dump($data);
         echo '</pre>';
     ?>
+    </pre>
+
+    <input id="display" type="button" value="Show" onclick="show('comparison5');">
 </body>
 </html>

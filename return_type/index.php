@@ -9,27 +9,55 @@
 </head>
 <body>
     <h2>Return Type Declarations</h2>
+
     <pre>
-    function arraysSum(array ...$arrays): array
+    function arraysSum1(array ...$arrays): array
     {
         return array_map(function(array $array): int {
             return array_sum($array);
         }, $arrays);
     }
 
-    print_r(arraysSum([1,2,3], [4,5,6], [7,8,9]));
+    print_r(arraysSum1([1,2,3], [4,5,6], [7,8,9]));
     </pre>
-    <input id="display" type="button" value="Show" onclick="show('return');">
-    <pre class="code return">
+    <input id="display" type="button" value="Show" onclick="show('return1');">
+    <pre class="code return1">
         <?php
-        function arraysSum(array ...$arrays): array
+        function arraysSum1(array ...$arrays): array
         {
             return array_map(function(array $array): int {
                 return array_sum($array);
             }, $arrays);
         }
-        print_r(arraysSum([1,2,3], [4,5,6], [7,8,9]));
+        print_r(arraysSum1([1,2,3], [4,5,6], [7,8,9]));
         ?>
     </pre>
+    <hr>
+
+    <pre>
+    function arraysSum2(array ...$arrays): string
+    {
+        return array_map(function(array $array): int {
+            return array_sum($array);
+        }, $arrays);
+    }
+
+    print_r(arraysSum2([1,2,3], [4,5,6], [7,8,9]));
+    </pre>
+    <input id="display" type="button" value="Show" onclick="show('return2');">
+    <pre class="code return2">
+        <?php
+        function arraysSum2(array ...$arrays): string
+        {
+            return array_map(function(array $array): int {
+                return array_sum($array);
+            }, $arrays);
+        }
+        print_r(arraysSum2([1,2,3], [4,5,6], [7,8,9]));
+        ?>
+    </pre>
+    <hr>
+
+
 </body>
 </html>
